@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pétanque 2000</string>
+    <string name="previous_games">PREVIOUS GAMES</string>
 </resources>
