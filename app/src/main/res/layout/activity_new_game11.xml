@@ -6,65 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".NewGame11">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/nom_joueur"
-        android:layout_width="wrap_content"
-        android:layout_height="87dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="103dp"
-        android:layout_marginLeft="103dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="89dp"
-        android:text="On sait pas"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txt_start"
-        android:layout_width="247dp"
-        android:layout_height="79dp"
-        android:layout_above="@+id/suivant"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="77dp"
-        android:layout_marginLeft="77dp"
-        android:layout_marginBottom="165dp"
-        android:text="A toi de commencer en lancant le cochonnet"
-        android:textSize="24sp" />
-
-    <Button
-        android:id="@+id/suivant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="86dp"
-        android:text="Suivant" />
+            <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/petanque"/>
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="246dp"
-        android:text="Tu joues contre" />
+            <TextView
+            android:id="@+id/nom_joueur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Joueur 1"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="100dp"/>
 
-    <TextView
-        android:id="@+id/nom_joueur2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="190dp"
-        android:text="nom_joueur2" />
+            <TextView
+            android:id="@+id/txt_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+            android:text="A toi de commencer en lancant le cochonnet !"
+            android:textSize="24sp" />
+
+
+            <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+            android:text="Tu joues contre ; " />
+    >
+            <TextView
+            android:id="@+id/nom_joueur2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="100dp"
+            android:text="nom_joueur2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:text="Lancez un chronometre " />
+
+            <Button
+            android:id="@+id/suivant"
+                android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+            android:text="Suivant" />
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -13,6 +13,7 @@ public class NewGame11 extends AppCompatActivity {
 
         private TextView player1;
         private TextView player2;
+        private Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class NewGame11 extends AppCompatActivity {
         setContentView(R.layout.activity_new_game11);
         player1= (TextView) findViewById(R.id.nom_joueur);
         player2 = (TextView) findViewById(R.id.nom_joueur2);
+        next = (Button) findViewById(R.id.suivant);
 
         Intent i = getIntent();
         String nom = i.getStringExtra("p1");
@@ -29,6 +31,20 @@ public class NewGame11 extends AppCompatActivity {
             player1.setText(nom);
             player2.setText(nom2);
         }
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String data = player1.getText().toString();
+                String data2 = player2.getText().toString();
+
+                Intent intent3 = new Intent(NewGame11.this,NewGame12.class);
+                intent3.putExtra("p1",data);
+                intent3.putExtra("p2", data2);
+                startActivity(intent3);
+
+            }
+        });
 
     }
 }
