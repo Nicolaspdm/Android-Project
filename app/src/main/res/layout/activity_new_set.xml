@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewGame12">
+    tools:context=".NewSet">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -27,18 +29,66 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="15dp">
 
             <TextView
-
-                android:id="@+id/titreNG12"
+                android:id="@+id/titreNS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/ns"
                 android:textAllCaps="true"
                 android:textSize="24sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="@string/ns_question"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/ns_j1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="18dp"
                 android:textStyle="bold"
-                android:text="@string/encours"/>
+                android:text="joueur1"/>
+
+            <Switch
+                android:id="@+id/ns_swich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:id="@+id/ns_j2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:text="joueur2"/>
 
 
         </LinearLayout>
@@ -47,38 +97,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:gravity="center">
-
-            <TextView
-
-                android:id="@+id/joueur1_12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:text="Joueur1"/>
+            android:gravity="center"
+            android:layout_marginTop="25dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
                 android:textSize="18dp"
-                android:textStyle="italic"
-                android:layout_marginLeft="15dp"
-                android:text="VS"/>
-
-            <TextView
-                android:id="@+id/joueur2_12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_marginLeft="15dp"
-                android:text="Joueur2"/>
+                android:text="@string/ns_cb"/>
 
         </LinearLayout>
 
@@ -86,16 +112,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="25dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/ns_cb"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="18dp"
+                android:hint="0"
+                android:textStyle="bold"
+                android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:text="Set de la partie :"/>
-
+                android:text="@string/ns_unit"/>
 
         </LinearLayout>
 
@@ -103,33 +138,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            android:gravity="right">
+            android:gravity="center"
+            android:layout_marginTop="45dp">
 
             <Button
-                android:id="@+id/add_set"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:text="+"/>
+                android:id="@+id/ns_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ns_btn"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            android:gravity="center">
-
-
-        </LinearLayout>
-
 
 
     </LinearLayout>
-
-
-
 
 
 </RelativeLayout>

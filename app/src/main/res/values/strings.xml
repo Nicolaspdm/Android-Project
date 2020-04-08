@@ -9,5 +9,9 @@
     <string name="nomj2">Nom Joueur 2 :</string>
     <string name="btn_start">Jouer !</string>
     <string name="encours">Partie en cours ...</string>
-
+    <string name="ns">New Set</string>
+    <string name="ns_question">Qui a remporté cette manche ?</string>
+    <string name="ns_cb">Combien de point(s) remporté(s) ?</string>
+    <string name="ns_unit">point(s)</string>
+    <string name="ns_btn">Enregistrer le Set</string>
 </resources>
