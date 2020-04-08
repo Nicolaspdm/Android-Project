@@ -8,5 +8,6 @@
     <string name="nomj1">Nom Joueur 1 :</string>
     <string name="nomj2">Nom Joueur 2 :</string>
     <string name="btn_start">Jouer !</string>
+    <string name="encours">Partie en cours ...</string>
 
 </resources>

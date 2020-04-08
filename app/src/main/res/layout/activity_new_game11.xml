@@ -9,78 +9,120 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
             <ImageView
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:src="@drawable/petanque"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
 
             <TextView
             android:id="@+id/nom_joueur"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Joueur 1"
             android:textAllCaps="true"
             android:textSize="24sp"
-            android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="100dp"/>
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
 
             <TextView
-            android:id="@+id/txt_start"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-            android:text="A toi de commencer en lancant le cochonnet !"
-            android:textSize="24sp" />
+                android:id="@+id/txt_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="A toi de commencer en lancant le cochonnet !"
+                android:textSize="24sp" />
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
 
             <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textSize="24sp"
-                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Tu joues contre : " />
 
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-            android:text="Tu joues contre ; " />
-    >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
             <TextView
-            android:id="@+id/nom_joueur2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+                android:id="@+id/nom_joueur2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textAllCaps="true"
-                android:layout_marginTop="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="100dp"
-            android:text="nom_joueur2" />
+                android:text="nom_joueur2" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
 
         <TextView
-            android:id="@+id/textView"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text="Lancez un chronometre " />
+
+    </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:text="Lancez un chronometre " />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="50dp">
 
             <Button
-            android:id="@+id/suivant"
-                android:layout_marginTop="50dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-            android:text="Suivant" />
+                android:id="@+id/suivant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suivant" />
+        </LinearLayout>
 
     </LinearLayout>
 
