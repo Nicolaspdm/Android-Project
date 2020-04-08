@@ -2,6 +2,7 @@ package ck.edu.com.ptanque2000;
 
 import android.app.Activity;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,4 +38,5 @@ public class MyListAdapter extends ArrayAdapter<String> {
         return rowView ;
 
     }
+
 }

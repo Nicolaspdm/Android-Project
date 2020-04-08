@@ -40,4 +40,8 @@ public class PreviousGames extends AppCompatActivity {
         Intent intent = new Intent(PreviousGames.this, MainActivity.class);
         startActivity(intent);}
 
+    public void displayGameStats(View view) {
+        Intent intent = new Intent(PreviousGames.this, GameStats.class);
+        startActivity(intent);}
+
 }
