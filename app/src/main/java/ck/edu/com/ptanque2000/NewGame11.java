@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NewGame11 extends AppCompatActivity {
 
@@ -23,9 +24,17 @@ public class NewGame11 extends AppCompatActivity {
         player2 = (TextView) findViewById(R.id.nom_joueur2);
         next = (Button) findViewById(R.id.suivant);
 
+        String nom=null;
+        String nom2=null;
+
         Intent i = getIntent();
-        String nom = i.getStringExtra("p1");
-        String nom2 = i.getStringExtra("p2");
+        try{ nom =i.getStringExtra("p1");}catch (Error e){
+            Toast.makeText(NewGame11.this, "player1 erreur", Toast.LENGTH_SHORT).show();}
+        try{ nom2 =i.getStringExtra("p2");}catch (Error e){
+            Toast.makeText(NewGame11.this, "player2 erreur", Toast.LENGTH_SHORT).show();}
+
+        //String nom = i.getStringExtra("p1");
+        //String nom2 = i.getStringExtra("p2");
 
         if(nom != null && nom2 != null){
             player1.setText(nom);

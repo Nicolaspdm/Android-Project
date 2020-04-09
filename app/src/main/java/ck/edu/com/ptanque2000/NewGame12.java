@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NewGame12 extends AppCompatActivity {
 
@@ -22,16 +23,17 @@ public class NewGame12 extends AppCompatActivity {
         setContentView(R.layout.activity_new_game12);
 
         Intent i = getIntent();
-        player1=i.getStringExtra("p1");
-        player2=i.getStringExtra("p2");
+        try{player1=i.getStringExtra("p1");}catch (Error e){Toast.makeText(NewGame12.this, "player1 erreur", Toast.LENGTH_SHORT).show();}
+        try{player2=i.getStringExtra("p2");}catch (Error e){Toast.makeText(NewGame12.this, "player2 erreur", Toast.LENGTH_SHORT).show();}
+        //player2=i.getStringExtra("p2");
 
-        joueur1.findViewById(R.id.joueur1_12);
-        joueur2.findViewById(R.id.joueur2_12);
+        joueur1 = (TextView) findViewById(R.id.joueur1_12);
+        joueur2 = (TextView) findViewById(R.id.joueur2_12);
 
         joueur1.setText(player1);
         joueur2.setText(player2);
 
-        ajout_set.findViewById(R.id.add_set);
+        ajout_set = findViewById(R.id.add_set);
         ajout_set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,4 +50,5 @@ public class NewGame12 extends AppCompatActivity {
 
 
     }
+
 }
