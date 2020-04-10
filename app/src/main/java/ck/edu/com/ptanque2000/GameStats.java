@@ -21,6 +21,7 @@ public class GameStats extends AppCompatActivity {
     String mduration = "30:57";
     String Glocation = "Paris";
 
+    //commm
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
