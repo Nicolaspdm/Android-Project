@@ -62,8 +62,7 @@
                 android:text="@string/nombrepart"
                 android:textSize="24dp"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimaryDark"
-                />
+                android:textColor="@color/colorPrimaryDark"/>
 
 
 
