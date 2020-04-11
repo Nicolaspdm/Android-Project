@@ -32,4 +32,6 @@
     <string name="joueur1_ns">joueur1</string>
     <string name="joueur2_ns">joueur2</string>
     <string name="info_btn_customlistview">Info</string>
+    <string name="newgame_btn_main">NEW GAME</string>
+    <string name="signature_main">Projet Android de Nicolas PRINCE et Jade LAVILLE OCRES 2 - 2020</string>
 </resources>
