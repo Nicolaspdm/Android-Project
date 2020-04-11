@@ -13,8 +13,12 @@ public class NewGame12 extends AppCompatActivity {
 
     private String player1;
     private String player2;
+    private String lat;
+    private String longi;
     private TextView joueur1;
     private TextView joueur2;
+    private TextView latitude;
+    private TextView longitude;
     private Button ajout_set;
 
     @Override
@@ -25,13 +29,19 @@ public class NewGame12 extends AppCompatActivity {
         Intent i = getIntent();
         try{player1=i.getStringExtra("p1");}catch (Error e){Toast.makeText(NewGame12.this, "player1 erreur", Toast.LENGTH_SHORT).show();}
         try{player2=i.getStringExtra("p2");}catch (Error e){Toast.makeText(NewGame12.this, "player2 erreur", Toast.LENGTH_SHORT).show();}
+        try{lat=i.getStringExtra("latitude");}catch (Error e){Toast.makeText(NewGame12.this, "latitude erreur", Toast.LENGTH_SHORT).show();}
+        try{longi=i.getStringExtra("longitude");}catch (Error e){Toast.makeText(NewGame12.this, "longueur erreur", Toast.LENGTH_SHORT).show();}
         //player2=i.getStringExtra("p2");
 
         joueur1 = (TextView) findViewById(R.id.joueur1_12);
         joueur2 = (TextView) findViewById(R.id.joueur2_12);
+        longitude = (TextView) findViewById(R.id.longitude_ng12);
+        latitude = (TextView) findViewById(R.id.latitude_ng12);
 
         joueur1.setText(player1);
         joueur2.setText(player2);
+        longitude.setText(longi);
+        latitude.setText(lat);
 
         ajout_set = findViewById(R.id.add_set);
         ajout_set.setOnClickListener(new View.OnClickListener() {
