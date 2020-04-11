@@ -21,6 +21,7 @@ import android.location.LocationManager;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 
 public class NewGame1 extends AppCompatActivity implements LocationListener {
@@ -31,19 +32,63 @@ public class NewGame1 extends AppCompatActivity implements LocationListener {
     private EditText nb_joueurs;
     private TextView latitude;
     private TextView longitude;
+    private String provider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game1);
 
-        joueur1=findViewById(R.id.nameJ1);
-        joueur2=findViewById(R.id.nameJ2);
-        nb_joueurs=findViewById(R.id.numberJ);
-        latitude=findViewById(R.id.lati_ng1);
-        longitude=findViewById(R.id.longi_ng1);
+        joueur1 = findViewById(R.id.nameJ1);
+        joueur2 = findViewById(R.id.nameJ2);
+        nb_joueurs = findViewById(R.id.numberJ);
+        latitude = findViewById(R.id.lati_ng1);
+        longitude = findViewById(R.id.longi_ng1);
 
-        Button button_start = findViewById(R.id.btn_start);
+        LocationManager locationManager = null;
+        locationManager = (LocationManager) getSystemService(NewGame1.this.LOCATION_SERVICE);
+
+        Criteria criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_COARSE);
+
+
+        provider = locationManager.getBestProvider(criteria, false);
+
+        if (provider == null) {
+            latitude.setText("Provider null");
+        } else {
+
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
+            Location location = locationManager.getLastKnownLocation(provider);
+
+
+            if (location != null) {
+                System.out.println("Provider : " + provider + "nous a permis d'avoir la localisation");
+                double lat = 0;
+                double longi = 0;
+                lat = location.getLatitude();
+                longi = location.getLongitude();
+
+                latitude.setText((int) lat);
+                longitude.setText((int) longi);
+            } else {
+                latitude.setText("Acces refuse");
+                longitude.setText("Acces refuse");
+            }
+
+        }
+
+
+            Button button_start = findViewById(R.id.btn_start);
         button_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,10 +106,30 @@ public class NewGame1 extends AppCompatActivity implements LocationListener {
                     startActivity(intent2);
                 }
 
+                
                 }
 
         });
     }
 
 
+    @Override
+    public void onLocationChanged(Location location) {
+
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
+    }
 }
