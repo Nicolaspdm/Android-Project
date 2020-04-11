@@ -33,6 +33,8 @@ public class NewGame1 extends AppCompatActivity implements LocationListener {
     private TextView latitude;
     private TextView longitude;
     private String provider;
+    private TextView name_j1;
+    private TextView name_j2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,13 @@ public class NewGame1 extends AppCompatActivity implements LocationListener {
         nb_joueurs = findViewById(R.id.numberJ);
         latitude = findViewById(R.id.lati_ng1);
         longitude = findViewById(R.id.longi_ng1);
+        name_j1 = findViewById(R.id.nom_j1);
+        name_j2 = findViewById(R.id.nom_j2);
+
+        if(nb_joueurs.getText().toString()=="4"&&nb_joueurs.getText().toString()=="6"){
+            name_j1.setText("Nom de l'equipe 1");
+            name_j2.setText("Nom de l'equipe 2");
+        }
 
         LocationManager locationManager = null;
         locationManager = (LocationManager) getSystemService(NewGame1.this.LOCATION_SERVICE);
