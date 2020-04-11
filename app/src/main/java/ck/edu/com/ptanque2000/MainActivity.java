@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_NewGame ;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void openNewGam (){
         Intent intent = new Intent(this,NewGame1.class);
+        startActivity(intent);
+    }
+
+
+    public void sendMessage(View view) {
+        Intent intent = new Intent(MainActivity.this, PreviousGames.class);
         startActivity(intent);
     }
 }
