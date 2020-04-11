@@ -23,7 +23,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="105dp"
                 android:layout_marginTop="0dp"
                 android:src="@drawable/petanque"/>
 
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="50dp">
 
             <TextView
                 android:id="@+id/titreNG"
@@ -43,7 +43,8 @@
                 android:layout_gravity="center"
                 android:text="@string/titre_NG"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
 
         </LinearLayout>
 
@@ -59,8 +60,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombrepart"
-                android:textSize="18sp"
+                android:textSize="24dp"
                 android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
                 />
 
 
@@ -72,13 +74,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
              android:gravity="center"
-             android:layout_marginTop="12dp">
+             android:layout_marginTop="15dp">
 
             <EditText
                 android:id="@+id/numberJ"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:hint="2"
+                android:textSize="20dp"
                 android:gravity="center"
                 android:inputType="number" />
 
@@ -86,19 +89,19 @@
                 android:id="@+id/part"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="24sp"
-                android:textSize="18sp"
                 android:text="@string/parti"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="10dp"/>
 
             <TextView
                 android:id="@+id/limite_part"
-                android:layout_width="133dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/limite_participant"
-                android:textSize="12sp"
+                android:textSize="16dp"
                 android:textStyle="italic"
-                android:layout_marginLeft="35dp"/>
+                android:layout_marginLeft="15dp"/>
 
          </LinearLayout>
 
@@ -107,15 +110,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
              android:gravity="center"
-             android:layout_marginTop="20dp">
+             android:layout_marginTop="30dp">
 
             <TextView
                 android:id="@+id/nom_part"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nomj"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
 
          </LinearLayout>
 
@@ -127,10 +131,12 @@
             android:layout_marginTop="12dp">
 
                 <TextView
-                android:id="@+id/nom_j1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nomj1" />
+                    android:id="@+id/nom_j1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nomj1"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary"/>
 
                 <EditText
                 android:id="@+id/nameJ1"
@@ -153,7 +159,9 @@
                 android:id="@+id/nom_j2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nomj2" />
+                android:text="@string/nomj2"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimary"/>
 
             <EditText
                 android:id="@+id/nameJ2"
@@ -173,10 +181,13 @@
             android:layout_marginTop="40dp">
 
              <Button
-            android:id="@+id/btn_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_start"/>
+                 android:id="@+id/btn_start"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/btn_start"
+                 android:textColor="@color/white"
+                 android:textSize="18sp"
+                 android:background="@color/colorPrimaryDark"/>
 
         </LinearLayout>
 

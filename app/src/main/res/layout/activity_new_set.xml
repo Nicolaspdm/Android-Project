@@ -20,7 +20,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="105dp"
                 android:src="@drawable/petanque"/>
 
         </LinearLayout>
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="50dp">
 
             <TextView
                 android:id="@+id/titreNS"
@@ -39,7 +39,8 @@
                 android:text="@string/ns"
                 android:textAllCaps="true"
                 android:textSize="24sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
 
         </LinearLayout>
 
@@ -53,43 +54,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
                 android:text="@string/ns_question"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:id="@+id/ns_j1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:text="joueur1"/>
-
-            <Switch
-                android:id="@+id/ns_swich"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"/>
-
-            <TextView
-                android:id="@+id/ns_j2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"
-                android:text="joueur2"/>
-
 
         </LinearLayout>
 
@@ -101,10 +68,49 @@
             android:layout_marginTop="25dp">
 
             <TextView
+                android:id="@+id/ns_j1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAllCaps="true"
                 android:textSize="18dp"
-                android:text="@string/ns_cb"/>
+                android:textStyle="bold"
+                android:text="@string/joueur1_ns"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <Switch
+                android:id="@+id/ns_swich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/ns_j2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:text="@string/joueur2_ns"
+                android:textColor="@color/colorPrimaryDark"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="@string/ns_cb"
+                android:textColor="@color/colorPrimary"/>
 
         </LinearLayout>
 
@@ -120,7 +126,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:textSize="18dp"
+                android:textSize="24dp"
                 android:hint="0"
                 android:textStyle="bold"
                 android:gravity="center"/>
@@ -128,8 +134,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
                 android:text="@string/ns_unit"/>
 
         </LinearLayout>
@@ -145,7 +152,10 @@
                 android:id="@+id/ns_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ns_btn"/>
+                android:text="@string/ns_btn"
+                android:textSize="18sp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 

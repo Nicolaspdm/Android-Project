@@ -19,7 +19,7 @@
 
             <ImageView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="105dp"
             android:src="@drawable/petanque"/>
     </LinearLayout>
 
@@ -28,16 +28,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="70dp">
 
             <TextView
-            android:id="@+id/nom_joueur"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Joueur 1"
-            android:textAllCaps="true"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
+                android:id="@+id/nom_joueur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joueur 1"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
 
     </LinearLayout>
 
@@ -47,15 +48,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
 
             <TextView
                 android:id="@+id/txt_start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="A toi de commencer en lancant le cochonnet !"
-                android:textSize="24sp" />
+                android:text="@string/cochonnet_ng11"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimary"/>
 
     </LinearLayout>
     <LinearLayout
@@ -63,7 +67,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="50dp">
 
             <TextView
                 android:id="@+id/textView"
@@ -71,7 +75,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:gravity="center"
-                android:text="Tu joues contre : " />
+                android:text="@string/contre_ng11"
+                android:textColor="@color/colorPrimary"/>
 
     </LinearLayout>
 
@@ -80,7 +85,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="50dp">
 
             <TextView
                 android:id="@+id/nom_joueur2"
@@ -89,39 +94,27 @@
                 android:textAllCaps="true"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
                 android:text="nom_joueur2" />
 
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
-
-        <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:gravity="center"
-                android:text="Lancez un chronometre " />
-
-    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="70dp">
 
             <Button
                 android:id="@+id/suivant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Suivant" />
+                android:text="@string/btn_ng11"
+                android:textSize="18sp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
     </LinearLayout>

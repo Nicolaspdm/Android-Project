@@ -20,8 +20,8 @@ public class PreviousGames extends AppCompatActivity {
     };
 
     String[] score_value ={
-            "10", "12", "13",
-            "7", "13",
+            "10", "12", "5",
+            "7", "0",
     };
 
 
