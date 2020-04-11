@@ -99,13 +99,20 @@ public class NewGame1 extends AppCompatActivity implements LocationListener {
                 if(joueur1.getText().toString().equals("") || joueur2.getText().toString().equals("")){
                     Toast.makeText(NewGame1.this,"Entrez le nom des joueurs svp", Toast.LENGTH_SHORT).show();
                 }
+                else if( (latitude.getText().toString().equals("Provider null")||latitude.getText().toString().equals("Acces refuse"))&&longitude.getText().toString().equals("Acces refuse")){
+                    Toast.makeText(NewGame1.this,"Pas de localisation lat :" +latitude.getText().toString()+"Long : "+longitude.getText().toString(),Toast.LENGTH_SHORT).show();
+                }
                 else {
                     String data = joueur1.getText().toString();
                     String data2 = joueur2.getText().toString();
+                    String latitude_ng1 =latitude.getText().toString();
+                    String longitude_ng1 = longitude.getText().toString();
 
                     Intent intent2 = new Intent(NewGame1.this, NewGame11.class);
                     intent2.putExtra("p1",data);
                     intent2.putExtra("p2",data2);
+                    intent2.putExtra("latitude",latitude_ng1);
+                    intent2.putExtra("longitude",longitude_ng1);
                     startActivity(intent2);
                 }
 
