@@ -33,17 +33,17 @@ public class NewGame12 extends AppCompatActivity {
         try{indice=i.getStringExtra("indice");}catch (Error e){Toast.makeText(NewGame12.this, "indice erreur", Toast.LENGTH_SHORT).show();}
 
         //si intent vient de NG11 alors on récupère les bonnes données
-        if(indice=="NG11"){
+        //if(indice=="NG11"){
             try{player1=i.getStringExtra("p1");}catch (Error e){Toast.makeText(NewGame12.this, "player1 erreur", Toast.LENGTH_SHORT).show();}
             try{player2=i.getStringExtra("p2");}catch (Error e){Toast.makeText(NewGame12.this, "player2 erreur", Toast.LENGTH_SHORT).show();}
             try{lat=i.getStringExtra("latitude");}catch (Error e){Toast.makeText(NewGame12.this, "latitude erreur", Toast.LENGTH_SHORT).show();}
             try{longi=i.getStringExtra("longitude");}catch (Error e){Toast.makeText(NewGame12.this, "longueur erreur", Toast.LENGTH_SHORT).show();}
-        }
-        else if (indice=="NS"){
+       // }
+       // else if (indice=="NS"){
             try{winner=i.getStringExtra("winner");}catch (Error e){Toast.makeText(NewGame12.this, "winner erreur", Toast.LENGTH_SHORT).show();}
             try{score=i.getStringExtra("score");}catch (Error e){Toast.makeText(NewGame12.this, "score erreur", Toast.LENGTH_SHORT).show();}
 
-        }
+        //}
 
         joueur1 = (TextView) findViewById(R.id.joueur1_12);
         joueur2 = (TextView) findViewById(R.id.joueur2_12);

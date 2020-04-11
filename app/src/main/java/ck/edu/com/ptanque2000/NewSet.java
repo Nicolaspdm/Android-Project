@@ -49,7 +49,7 @@ public class NewSet extends AppCompatActivity {
                     //Recupération des variables
                     String data = player1;
                     String data2 = player2;
-                    String indice = "NS"
+                    String indice = "NS";
                     int score = Integer.parseInt(newset_cb.getText().toString());
                     String winner = null;
 
