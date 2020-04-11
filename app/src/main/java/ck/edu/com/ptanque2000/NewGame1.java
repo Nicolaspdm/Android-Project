@@ -78,8 +78,11 @@ public class NewGame1 extends AppCompatActivity implements LocationListener {
                 lat = location.getLatitude();
                 longi = location.getLongitude();
 
-                latitude.setText((int) lat);
-                longitude.setText((int) longi);
+                String lati_str = String.valueOf(lat);
+                String longi_str = String.valueOf(longi);
+
+                latitude.setText(lati_str);
+                longitude.setText(longi_str);
             } else {
                 latitude.setText("Acces refuse");
                 longitude.setText("Acces refuse");
