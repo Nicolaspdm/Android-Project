@@ -32,7 +32,6 @@ public class GameStats extends AppCompatActivity {
 
         winner_name.setText(wname);
         score_value.setText(svalue);
-        match_duration.setText(mduration);
         game_localisation.setText(Glocation);
 
     }
