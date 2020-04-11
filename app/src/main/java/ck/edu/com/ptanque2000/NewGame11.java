@@ -62,8 +62,10 @@ public class NewGame11 extends AppCompatActivity {
                 String data2 = player2.getText().toString();
                 String datalt = latitude.getText().toString();
                 String datalg = longitude.getText().toString();
+                String indice = "NG11";
 
                 Intent intent3 = new Intent(NewGame11.this,NewGame12.class);
+                intent3.putExtra("indice",indice);
                 intent3.putExtra("p1",data);
                 intent3.putExtra("p2", data2);
                 intent3.putExtra("latitude",datalt);
