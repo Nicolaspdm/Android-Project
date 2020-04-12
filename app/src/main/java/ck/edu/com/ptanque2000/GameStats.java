@@ -41,6 +41,13 @@ public class GameStats extends AppCompatActivity {
 
        Intent intent = getIntent();
        wname = intent.getStringExtra("winner");
+       svalue = intent.getStringExtra("score_w");
+       adversaire = intent.getStringExtra("adversaire");
+       score_adveresaire = intent.getStringExtra("score_ad");
+       latitude = intent.getStringExtra("latitude");
+       longitude = intent.getStringExtra("longitude");
+
+
 
         winner_name.setText(wname);
         score_value.setText(svalue);

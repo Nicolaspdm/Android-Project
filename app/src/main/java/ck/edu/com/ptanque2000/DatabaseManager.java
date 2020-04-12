@@ -125,5 +125,105 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return id_str;
     }
 
+    public String recup_adver_byid (String id_str){
+        String adversaire = null;
+
+
+        String strSQL_adv = "SELECT name2 FROM T_Match WHERE idMatch="+id_str;
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_adv,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            adversaire = string ;
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return adversaire;
+    }
+
+    public String recup_score_byid (String id_str){
+        String score = null;
+
+
+        String strSQL_score = "SELECT score1 FROM T_Match WHERE idMatch="+id_str;
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_score,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            score = string ;
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return score;
+    }
+
+    public String recup_scoread_byid (String id_str){
+        String score = null;
+
+
+        String strSQL_score = "SELECT score2 FROM T_Match WHERE idMatch="+id_str;
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_score,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            score = string ;
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return score;
+    }
+
+    public String recup_latitude_byid (String id_str){
+        String latitude = null;
+
+
+        String strSQL_score = "SELECT lat FROM T_Match WHERE idMatch="+id_str;
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_score,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            latitude = string ;
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return latitude;
+    }
+
+    public String recup_longitude_byid (String id_str){
+        String longitude = null;
+
+
+        String strSQL_score = "SELECT lon FROM T_Match WHERE idMatch="+id_str;
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_score,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            longitude = string ;
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return longitude;
+    }
+
 
 }
