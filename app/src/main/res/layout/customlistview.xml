@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="0"
-            android:textSize="20dp"/>
+            android:textSize="16dp"/>
 
     <TextView
         android:id="@+id/winner_name"
@@ -24,7 +24,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:text="Vainqueur"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="50dp"
         android:textColor="@color/colorPrimaryDark"/>
 
        <TextView
@@ -45,16 +45,6 @@
         android:text="0"
         android:textSize="20dp"/>
 
-    <Button
-        android:id="@+id/info_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:onClick="displayGameStats"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:text="@string/info_btn_customlistview" />
 
     </LinearLayout>
 

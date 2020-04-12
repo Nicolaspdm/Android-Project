@@ -105,5 +105,25 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return id;
     }
 
+    public String recup_winner_byid (String id_str){
+        String winner = null;
+
+
+        String strSQL_winner = "SELECT name1 FROM T_Match WHERE idMatch="+id_str;
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_winner,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            id_str = string ;
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return id_str;
+    }
+
 
 }

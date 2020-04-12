@@ -114,13 +114,38 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/loca_gamestats"
+                android:text="@string/titre_latitude_ng1"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
 
             <TextView
-                android:id="@+id/game_localisation"
+                android:id="@+id/game_latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/localisation_gamestats"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titre_longitude_ng1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/game_longitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/localisation_gamestats"

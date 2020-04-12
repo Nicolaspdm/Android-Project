@@ -13,11 +13,20 @@ public class GameStats extends AppCompatActivity {
 
     private TextView winner_name;
     private TextView score_value;
-    private TextView game_localisation;
+    private TextView latitude_GS;
+    private TextView longitude_GS;
+    private TextView adversaire_GS;
+    private TextView score_adver_GS;
+    private DatabaseManager databaseManager;
+    private String id_detail;
 
-    String wname = "Louis";
-    String svalue = "14";
-    String Glocation = "Paris";
+
+    String wname = null;
+    String svalue = null;
+    String latitude = null;
+    String longitude = null;
+    String adversaire = null;
+    String score_adveresaire = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +34,20 @@ public class GameStats extends AppCompatActivity {
         setContentView(R.layout.activity_game_stats);
         winner_name= findViewById(R.id.winner_name);
         score_value = findViewById(R.id.score_value);
-        game_localisation = findViewById(R.id.game_localisation);
+        latitude_GS = findViewById(R.id.game_latitude);
+        longitude_GS = findViewById(R.id.game_longitude);
+        adversaire_GS = findViewById(R.id.adversaire_GS);
+        score_adver_GS = findViewById(R.id.score_adversaire);
+
+       Intent intent = getIntent();
+       wname = intent.getStringExtra("winner");
 
         winner_name.setText(wname);
         score_value.setText(svalue);
-        game_localisation.setText(Glocation);
+        latitude_GS.setText(latitude);
+        longitude_GS.setText(longitude);
+        adversaire_GS.setText(adversaire);
+        score_adver_GS.setText(score_adveresaire);
 
     }
 

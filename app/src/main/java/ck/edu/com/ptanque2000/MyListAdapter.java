@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
     private final String[] winner_name;
     private final String[] score_value;
     private final String[] id_match;
+    private Button details;
 
     public MyListAdapter (Activity context, String[] winner_name, String[] score_value, String[] id_match){
         super(context, R.layout.customlistview, winner_name);

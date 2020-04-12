@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -15,6 +17,9 @@ import java.util.List;
 
 
 public class PreviousGames extends AppCompatActivity {
+
+    private Button btn_detail;
+    private EditText id_detail;
 
     ListView list;
 
@@ -29,6 +34,9 @@ public class PreviousGames extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_games);
+
+        id_detail = findViewById(R.id.id_details);
+        btn_detail = findViewById(R.id.info_button);
 
 
         ///DECLARATION DU FICHIER DE RECUP
@@ -57,10 +65,37 @@ public class PreviousGames extends AppCompatActivity {
             id_match[i]=id_recupere.get(i);
         }
 
-
         MyListAdapter adapter = new MyListAdapter(this, winner_name, score_value,id_match);
         list = findViewById(R.id.list);
         list.setAdapter(adapter);
+
+        btn_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(id_detail.getText().toString().equals("")){
+                    Toast.makeText(PreviousGames.this,"Entrez une id de match svp. Ils sont sur la gauche de la partie",Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+                    String winnername = null;
+                    String adversaire = null;
+                    String score = null;
+                    String score_ad = null;
+                    String latitu = null;
+                    String longitu = null;
+
+                    winnername = databaseManager.recup_winner_byid(id_detail.getText().toString());
+                    Log.i("DATABASE","recup winner name dans click listener PG");
+
+                    Intent intent = new Intent(PreviousGames.this,GameStats.class);
+                    intent.putExtra("winner",winnername);
+                    startActivity(intent);
+
+
+                }
+            }
+        });
+
     }
 
     public void sendMessage(View view) {
