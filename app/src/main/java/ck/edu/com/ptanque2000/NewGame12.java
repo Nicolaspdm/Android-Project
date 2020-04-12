@@ -155,7 +155,15 @@ public class NewGame12 extends AppCompatActivity {
                 longit=longitude.getText().toString();
 
                 databaseManager = new DatabaseManager(NewGame12.this);
-                databaseManager.insertScore(nom_j1,nom_j2,score_jo1,score_jo2,latit,longit);
+                if (Integer.parseInt(score_jo1)>Integer.parseInt(score_jo2)){
+                    databaseManager.insertScore(nom_j1,nom_j2,score_jo1,score_jo2,latit,longit);
+                }
+                else if(Integer.parseInt(score_jo2)>Integer.parseInt(score_jo1)){
+                    databaseManager.insertScore(nom_j2,nom_j1,score_jo2,score_jo1,latit,longit);
+                }
+                else{
+                    databaseManager.insertScore("egalité",nom_j1,score_jo1,score_jo2,latit,longit);
+                }
                 databaseManager.close();
 
                 Intent intent5 = new Intent(NewGame12.this,PreviousGames.class);

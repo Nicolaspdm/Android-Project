@@ -20,6 +20,7 @@ public class PreviousGames extends AppCompatActivity {
     String[] winner_name = new String[4];
     String[] score_value = new String [4];
 
+
     private DatabaseManager databaseManager;
 
     @Override
@@ -27,8 +28,11 @@ public class PreviousGames extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_games);
 
+        int nb_march =2;
+        nb_march++;
         ///DECLARATION DU FICHIER DE RECUP
         List<String> names_recupere = new ArrayList<>();
+        List<String> names2_recupere = new ArrayList<>();
 
         ///OUVERTURE DE LA DATABASE
         databaseManager = new DatabaseManager(PreviousGames.this);
@@ -37,7 +41,7 @@ public class PreviousGames extends AppCompatActivity {
         names_recupere = databaseManager.recup_name1();
 
         ///INCREMENTATION VIEW
-        for(int i = 0; i<4;i++){
+        for(int i = 0; i<nb_march;i++){
             winner_name[i]=names_recupere.get(i);
         }
 
