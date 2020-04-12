@@ -7,22 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.List;
 
 
 public class PreviousGames extends AppCompatActivity {
 
-    ListView list;
+    private TextView displayGames;
+    private DatabaseManager databaseManager;
 
-    String[] winner_name = {
-            "Arnaud", "Henri", "Jade",
-            "Seb", "Nico",
-    };
 
-    String[] score_value ={
-            "10", "12", "13",
-            "7", "13",
-    };
+
+
 
 
     @Override
@@ -30,10 +28,18 @@ public class PreviousGames extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_games);
 
+        displayGames = (TextView) findViewById(R.id.displayGames);
+        databaseManager = new DatabaseManager( this );
 
-        MyListAdapter adapter = new MyListAdapter(this, winner_name, score_value);
-        list = findViewById(R.id.list);
-        list.setAdapter(adapter);
+        List<Game> games = databaseManager.read5names();
+        for (Game game : games) {
+            displayGames.append(game.toString() + "\n\n");
+        }
+
+
+        databaseManager.close();
+
+
     }
 
     public void sendMessage(View view) {
