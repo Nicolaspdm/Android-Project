@@ -38,4 +38,6 @@
     <string name="latitude_ng1">unknown</string>
     <string name="titre_longitude_ng1">Longitude :</string>
     <string name="longitude_ng1">unknown</string>
+    <string name="nom_win_ng12">Winner</string>
+    <string name="titre_ajoutset_ng12">Add a set :</string>
 </resources>

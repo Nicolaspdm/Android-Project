@@ -26,7 +26,7 @@
     <string name="cochonnet_ng11">A toi de commencer en lancant le cochonnet !</string>
     <string name="contre_ng11">Tu joues contre :</string>
     <string name="btn_ng11">Suivant</string>
-    <string name="titre_set_ng12">Set de la partie :</string>
+    <string name="titre_set_ng12"> Numero du Set :</string>
     <string name="joueur2_ng12">Joueur2</string>
     <string name="joueur1_ng12">Joueur1</string>
     <string name="joueur1_ns">joueur1</string>
@@ -38,4 +38,6 @@
     <string name="titre_longitude_ng1">Longitude :</string>
     <string name="longitude_ng1">non connue</string>
     <string name="nom_win_ng12">Vainqueur</string>
+    <string name="titre_ajoutset_ng12">Ajout d\'un set :</string>
+    <string name="inter_score">-</string>
 </resources>

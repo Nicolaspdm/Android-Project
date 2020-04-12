@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MyListAdapt_NG12 extends ArrayAdapter<String> {
 
     private final Activity context;
