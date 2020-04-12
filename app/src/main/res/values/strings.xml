@@ -40,4 +40,5 @@
     <string name="nom_win_ng12">Vainqueur</string>
     <string name="titre_ajoutset_ng12">Ajout d\'un set :</string>
     <string name="inter_score">-</string>
+    <string name="finir_partie">Finir partie</string>
 </resources>

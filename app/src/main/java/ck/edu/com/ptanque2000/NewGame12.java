@@ -34,6 +34,8 @@ public class NewGame12 extends AppCompatActivity {
     private TextView numero_set;
     private TextView score_j1;
     private TextView score_j2;
+    private Button btn_finir;
+    private DatabaseManager databaseManager;
 
 
     ListView list_ng12;
@@ -66,6 +68,7 @@ public class NewGame12 extends AppCompatActivity {
         numero_set = (TextView)findViewById(R.id.numero_set);
         score_j1 = (TextView) findViewById(R.id.score_j1);
         score_j2 = (TextView) findViewById(R.id.score_j2);
+        btn_finir=(Button) findViewById(R.id.btn_fin);
 
 
 
@@ -133,6 +136,35 @@ public class NewGame12 extends AppCompatActivity {
                 }
             }
         });
+
+        btn_finir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nom_j1=null;
+                String nom_j2=null;
+                String score_jo2=null;
+                String score_jo1=null;
+                String latit=null;
+                String longit=null;
+
+                nom_j1=joueur1.getText().toString();
+                nom_j2=joueur2.getText().toString();
+                score_jo2=score_j2.getText().toString();
+                score_jo1=score_j1.getText().toString();
+                latit=latitude.getText().toString();
+                longit=longitude.getText().toString();
+
+                databaseManager = new DatabaseManager(NewGame12.this);
+                databaseManager.insertScore(nom_j1,nom_j2,score_jo1,score_jo2,latit,longit);
+                databaseManager.close();
+
+                Intent intent5 = new Intent(NewGame12.this,PreviousGames.class);
+                startActivity(intent5);
+
+            }
+        });
+
+
 
 
 

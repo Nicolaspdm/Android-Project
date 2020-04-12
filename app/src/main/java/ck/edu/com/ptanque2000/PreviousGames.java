@@ -9,26 +9,37 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class PreviousGames extends AppCompatActivity {
 
     ListView list;
 
-    String[] winner_name = {
-            "Arnaud", "Henri", "Jade",
-            "Seb", "Nico",
-    };
+    String[] winner_name = new String[4];
+    String[] score_value = new String [4];
 
-    String[] score_value ={
-            "10", "12", "5",
-            "7", "0",
-    };
-
+    private DatabaseManager databaseManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_games);
+
+        ///DECLARATION DU FICHIER DE RECUP
+        List<String> names_recupere = new ArrayList<>();
+
+        ///OUVERTURE DE LA DATABASE
+        databaseManager = new DatabaseManager(PreviousGames.this);
+
+        ///RECUPERATION DES DONNEES
+        names_recupere = databaseManager.recup_name1();
+
+        ///INCREMENTATION VIEW
+        for(int i = 0; i<4;i++){
+            winner_name[i]=names_recupere.get(i);
+        }
 
 
         MyListAdapter adapter = new MyListAdapter(this, winner_name, score_value);

@@ -1,11 +1,15 @@
 package ck.edu.com.ptanque2000;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseManager extends SQLiteOpenHelper {
 
@@ -43,4 +47,44 @@ public class DatabaseManager extends SQLiteOpenHelper {
         this.getWritableDatabase().execSQL(strSQL);
         Log.i("DATABASE", "Database insered" );
     }
+
+    public List<String> recup_name1 (){
+        List<String> names_j1 = new ArrayList<>();
+
+        String strSQL_name1 = "SELECT name1 FROM T_Match";
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_name1,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            names_j1.add(string);
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup noms1");
+        }
+
+        return names_j1;
+    }
+
+    public List<String> recup_name2 (){
+        List<String> names_j2 = new ArrayList<>();
+
+        String strSQL_name2 = "SELECT name2 FROM T_Match";
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_name2,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            names_j2.add(string);
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup noms2");
+        }
+
+        return names_j2;
+    }
+
+
 }
