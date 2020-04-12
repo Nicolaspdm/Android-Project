@@ -44,4 +44,6 @@
     <string name="adversaire_GS">Adversaire :</string>
     <string name="nom_adversaire_GS">nom_adversaire</string>
     <string name="titre_score_GS">Score adversaire:</string>
+    <string name="nouvelle_partie_main">Nouvelle partie</string>
+    <string name="signature">Projet de Nicolas Prince et Jade LAVILLE OCRES2 2020</string>
 </resources>
