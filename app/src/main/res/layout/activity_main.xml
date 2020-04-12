@@ -7,60 +7,66 @@
     android:orientation="vertical"
     android:weightSum="5">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        app:srcCompat="@mipmap/ic_launcher" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:paddingTop="40dp">
+        android:orientation="vertical">
 
-        <ListView
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <Button
-            android:id="@+id/btn_NewGame"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="40dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center_horizontal|center_vertical"
-            android:text="NEW GAME" />
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_NewGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="NEW GAME" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:onClick="sendMessage"
-            android:text="@string/previous_games" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
 
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:onClick="sendMessage"
+                android:text="@string/previous_games" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
