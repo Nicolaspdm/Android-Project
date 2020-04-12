@@ -185,7 +185,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/titre_ajoutset_ng12"
-                android:textSize="12dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"/>
 
         </LinearLayout>
