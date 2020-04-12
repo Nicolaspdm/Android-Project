@@ -86,5 +86,24 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return scores;
     }
 
+    public List<String> recup_id_match (){
+        List<String> id = new ArrayList<>();
+
+        String strSQL_id = "SELECT idMatch FROM T_Match order by idMatch DESC limit 5";
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_id,null);
+        curseur.moveToFirst();
+        //int i= 0;
+        while (!curseur.isAfterLast()){
+
+            String string = curseur.getString(0);
+            id.add(string);
+            curseur.moveToNext();
+            //i++;
+            Log.i("DATABASE","on a recup les id");
+        }
+
+        return id;
+    }
+
 
 }

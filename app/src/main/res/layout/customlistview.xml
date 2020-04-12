@@ -9,6 +9,14 @@
         android:orientation="horizontal"
         android:gravity="center">
 
+        <TextView
+            android:id="@+id/id_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="0"
+            android:textSize="20dp"/>
+
     <TextView
         android:id="@+id/winner_name"
         android:layout_width="wrap_content"
@@ -16,6 +24,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:text="Vainqueur"
+        android:layout_marginLeft="10dp"
         android:textColor="@color/colorPrimaryDark"/>
 
        <TextView

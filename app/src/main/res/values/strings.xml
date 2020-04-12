@@ -41,4 +41,7 @@
     <string name="titre_ajoutset_ng12">Ajout d\'un set :</string>
     <string name="inter_score">-</string>
     <string name="finir_partie">Finir partie</string>
+    <string name="adversaire_GS">Adversaire :</string>
+    <string name="nom_adversaire_GS">nom_adversaire</string>
+    <string name="titre_score_GS">Score adversaire:</string>
 </resources>

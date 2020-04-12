@@ -20,6 +20,7 @@ public class PreviousGames extends AppCompatActivity {
 
     String[] winner_name = new String[5];
     String[] score_value = new String [5];
+    String[] id_match = new String[5];
 
 
     private DatabaseManager databaseManager;
@@ -33,6 +34,7 @@ public class PreviousGames extends AppCompatActivity {
         ///DECLARATION DU FICHIER DE RECUP
         List<String> names_recupere = new ArrayList<>();
         List<String> scores_recupere = new ArrayList<>();
+        List<String> id_recupere = new ArrayList<>();
 
         ///OUVERTURE DE LA DATABASE
         databaseManager = new DatabaseManager(PreviousGames.this);
@@ -40,6 +42,7 @@ public class PreviousGames extends AppCompatActivity {
         ///RECUPERATION DES DONNEES
         names_recupere = databaseManager.recup_name1();
         scores_recupere = databaseManager.recup_score();
+        id_recupere = databaseManager.recup_id_match();
 
         ///INCREMENTATION VIEW
         int nb_match =0;
@@ -51,10 +54,11 @@ public class PreviousGames extends AppCompatActivity {
         for(int i = 0; i<nb_match;i++){
             winner_name[i]=names_recupere.get(i);
             score_value[i]=scores_recupere.get(i);
+            id_match[i]=id_recupere.get(i);
         }
 
 
-        MyListAdapter adapter = new MyListAdapter(this, winner_name, score_value);
+        MyListAdapter adapter = new MyListAdapter(this, winner_name, score_value,id_match);
         list = findViewById(R.id.list);
         list.setAdapter(adapter);
     }

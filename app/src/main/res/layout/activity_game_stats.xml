@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
         <TextView
@@ -38,6 +38,17 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/numero_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"/>
 
     </LinearLayout>
 
@@ -53,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/titre_vainqueur_gamestats"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
 
@@ -63,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="@string/nom_winner_gamestats"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -78,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Score :"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
 
@@ -88,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="@string/score_gamestats"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -104,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/loca_gamestats"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
 
@@ -113,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/localisation_gamestats"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
@@ -124,7 +135,49 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginTop="10dp">
-            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adversaire_GS"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/adversaire_GS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nom_adversaire_GS"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titre_score_GS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/score_adversaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/score_gamestats"
+                android:textSize="18sp" />
+
         </LinearLayout>
 
 
