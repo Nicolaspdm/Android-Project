@@ -33,16 +33,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="18dp"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/titreNG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="125dp"
-                android:layout_gravity="center"
                 android:text="@string/titre_NG"
-                android:textSize="30sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
 
@@ -52,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center">
 
             <TextView
@@ -73,7 +72,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
              android:gravity="center"
-             android:layout_marginTop="15dp">
+             android:layout_marginTop="10dp">
 
             <EditText
                 android:id="@+id/numberJ"
@@ -109,7 +108,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
              android:gravity="center"
-             android:layout_marginTop="30dp">
+             android:layout_marginTop="15dp">
 
             <TextView
                 android:id="@+id/nom_part"
@@ -127,7 +126,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="10dp">
 
                 <TextView
                     android:id="@+id/nom_j1"
@@ -171,6 +170,77 @@
                 android:layout_marginLeft="15dp"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/titre_loca_ng1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loca_ng1"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titre_latitude_ng1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/lati_ng1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude_ng1"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titre_longitude_ng1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/longi_ng1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude_ng1"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"/>
+
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"

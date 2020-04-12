@@ -21,6 +21,7 @@ public class NewSet extends AppCompatActivity {
     private EditText newset_cb;
     private Switch newset_switch;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,7 @@ public class NewSet extends AppCompatActivity {
                     //Recupération des variables
                     String data = player1;
                     String data2 = player2;
+                    String indice = "NS";
                     int score = Integer.parseInt(newset_cb.getText().toString());
                     String winner = null;
 
@@ -59,11 +61,10 @@ public class NewSet extends AppCompatActivity {
 
                     //Création de l'intent
                     Intent intent5= new Intent(NewSet.this,NewGame12.class);
-                    intent5.putExtra("p1", data);
-                    intent5.putExtra("p1", data2);
+                    intent5.putExtra("indice",indice);
                     intent5.putExtra("winner", winner);
                     intent5.putExtra("score", score);
-                    Toast.makeText(NewSet.this,"j1:"+data+"j2:"+data2+"win:"+winner+"score:"+score,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NewSet.this,"j1:"+data+"j2:"+data2+"win:"+winner+"score:"+score+"indice : "+indice,Toast.LENGTH_SHORT).show();
                     startActivity(intent5);
                 }
             }
