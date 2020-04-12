@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -17,8 +18,8 @@ public class PreviousGames extends AppCompatActivity {
 
     ListView list;
 
-    String[] winner_name = new String[4];
-    String[] score_value = new String [4];
+    String[] winner_name = new String[10];
+    String[] score_value = new String [10];
 
 
     private DatabaseManager databaseManager;
@@ -28,21 +29,28 @@ public class PreviousGames extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_games);
 
-        int nb_march =2;
-        nb_march++;
+
         ///DECLARATION DU FICHIER DE RECUP
         List<String> names_recupere = new ArrayList<>();
-        List<String> names2_recupere = new ArrayList<>();
+        List<String> scores_recupere = new ArrayList<>();
 
         ///OUVERTURE DE LA DATABASE
         databaseManager = new DatabaseManager(PreviousGames.this);
 
         ///RECUPERATION DES DONNEES
         names_recupere = databaseManager.recup_name1();
+        scores_recupere = databaseManager.recup_score();
 
         ///INCREMENTATION VIEW
-        for(int i = 0; i<nb_march;i++){
+        int nb_match =0;
+        String match =null;
+        nb_match = names_recupere.size();
+        match=String.valueOf(nb_match);
+        Log.i("DATABASE match ",match);
+
+        for(int i = 0; i<nb_match;i++){
             winner_name[i]=names_recupere.get(i);
+            score_value[i]=scores_recupere.get(i);
         }
 
 

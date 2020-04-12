@@ -67,23 +67,23 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return names_j1;
     }
 
-    public List<String> recup_name2 (){
-        List<String> names_j2 = new ArrayList<>();
+    public List<String> recup_score (){
+        List<String> scores = new ArrayList<>();
 
-        String strSQL_name2 = "SELECT name2 FROM T_Match";
-        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_name2,null);
+        String strSQL_score = "SELECT score2 FROM T_Match";
+        Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_score,null);
         curseur.moveToFirst();
         //int i= 0;
         while (!curseur.isAfterLast()){
 
             String string = curseur.getString(0);
-            names_j2.add(string);
+            scores.add(string);
             curseur.moveToNext();
             //i++;
-            Log.i("DATABASE","on a recup noms2");
+            Log.i("DATABASE","on a recup les scores");
         }
 
-        return names_j2;
+        return scores;
     }
 
 
