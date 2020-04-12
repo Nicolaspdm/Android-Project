@@ -17,6 +17,7 @@ public class GameStats extends AppCompatActivity {
     private TextView longitude_GS;
     private TextView adversaire_GS;
     private TextView score_adver_GS;
+    private TextView numero_match;
     private DatabaseManager databaseManager;
     private String id_detail;
 
@@ -27,11 +28,14 @@ public class GameStats extends AppCompatActivity {
     String longitude = null;
     String adversaire = null;
     String score_adveresaire = null;
+    String id_det = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_stats);
+
+        numero_match = findViewById(R.id.numero_match);
         winner_name= findViewById(R.id.winner_name);
         score_value = findViewById(R.id.score_value);
         latitude_GS = findViewById(R.id.game_latitude);
@@ -46,9 +50,10 @@ public class GameStats extends AppCompatActivity {
        score_adveresaire = intent.getStringExtra("score_ad");
        latitude = intent.getStringExtra("latitude");
        longitude = intent.getStringExtra("longitude");
+       id_det = intent.getStringExtra("id");
 
 
-
+        numero_match.setText(id_det);
         winner_name.setText(wname);
         score_value.setText(svalue);
         latitude_GS.setText(latitude);

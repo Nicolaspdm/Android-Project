@@ -83,6 +83,7 @@ public class PreviousGames extends AppCompatActivity {
                     String score_ad = null;
                     String latitu = null;
                     String longitu = null;
+                    String deta = null;
 
                     winnername = databaseManager.recup_winner_byid(id_detail.getText().toString());
                     adversaire = databaseManager.recup_adver_byid(id_detail.getText().toString());
@@ -90,6 +91,7 @@ public class PreviousGames extends AppCompatActivity {
                     score_ad = databaseManager.recup_scoread_byid(id_detail.getText().toString());
                     latitu = databaseManager.recup_latitude_byid(id_detail.getText().toString());
                     longitu = databaseManager.recup_longitude_byid(id_detail.getText().toString());
+                    deta = id_detail.getText().toString();
                     Log.i("DATABASE","recupdata from GS");
 
                     Intent intent = new Intent(PreviousGames.this,GameStats.class);
@@ -99,6 +101,7 @@ public class PreviousGames extends AppCompatActivity {
                     intent.putExtra("score_ad",score_ad);
                     intent.putExtra("latitude",latitu);
                     intent.putExtra("longitude",longitu);
+                    intent.putExtra("id", deta);
                     startActivity(intent);
 
 
