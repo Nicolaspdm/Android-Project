@@ -51,7 +51,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     public List<String> recup_name1 (){
         List<String> names_j1 = new ArrayList<>();
 
-        String strSQL_name1 = "SELECT name1 FROM T_Match";
+        String strSQL_name1 = "SELECT name1 FROM T_Match order by idMatch DESC limit 5";
         Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_name1,null);
         curseur.moveToFirst();
         //int i= 0;
@@ -70,7 +70,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     public List<String> recup_score (){
         List<String> scores = new ArrayList<>();
 
-        String strSQL_score = "SELECT score2 FROM T_Match";
+        String strSQL_score = "SELECT score2 FROM T_Match order by idMatch DESC limit 5";
         Cursor curseur = this.getReadableDatabase().rawQuery(strSQL_score,null);
         curseur.moveToFirst();
         //int i= 0;

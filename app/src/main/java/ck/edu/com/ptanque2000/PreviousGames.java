@@ -18,8 +18,8 @@ public class PreviousGames extends AppCompatActivity {
 
     ListView list;
 
-    String[] winner_name = new String[10];
-    String[] score_value = new String [10];
+    String[] winner_name = new String[5];
+    String[] score_value = new String [5];
 
 
     private DatabaseManager databaseManager;
