@@ -37,4 +37,5 @@
     <string name="latitude_ng1">non connue</string>
     <string name="titre_longitude_ng1">Longitude :</string>
     <string name="longitude_ng1">non connue</string>
+    <string name="nom_win_ng12">Vainqueur</string>
 </resources>
