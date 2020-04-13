@@ -15,7 +15,7 @@
     <string name="ns_unit">point(s)</string>
     <string name="ns_btn">Ajouter le Set</string>
     <string name="previous_games">Précédentes Parties</string>
-    <string name="titre_game_stats">Statistiques de la Partie</string>
+    <string name="titre_game_stats">Stats de la Partie</string>
     <string name="titre_vainqueur_gamestats">Vainqueur :</string>
     <string name="nom_winner_gamestats">TextView</string>
     <string name="score_gamestats">TextView</string>
